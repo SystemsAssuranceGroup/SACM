@@ -13,9 +13,8 @@ Folder /diagram/profile contains the files for the SACM UML profile.
 /diagram/emof.xml is the EMOF file for SACM 2.3.
 
 # Projects:
-The project org.eclipse.acme.sacm.* contains the EMF (Eclipse Modelling Framework) of SACM 2.3 - please note that the metamodel is maintained and changed, please subscribe to this repo for updates.  
-Please also note that once the metamodel is updated, the old version of EMF SACM models needs to be migrated, we recommend using the Eclipse Wizard Language (EWL) [2] for this purpose.  
-The project profile.sacm.omg contains the UML profile created using Papyrus [2] that conforms to SACM 2.3.   
+The project org.eclipse.acme.sacm.* contains the EMF (Eclipse Modelling Framework) of SACM 2.3 - please note that the metamodel is actively maintained, subscription to this repo is recommeneded.  
+In the case that the metamodel is updated, the old version of EMF SACM models needs to be migrated, we recommend using the Eclipse Wizard Language (EWL) [2] for this purpose.   The project profile.sacm.omg contains the UML profile created using Papyrus [2] that conforms to SACM 2.3.   
 
 At last, all pull requests are more than welcome.
 
@@ -30,5 +29,5 @@ At last, all pull requests are more than welcome.
 
 
 [1]. https://www.omg.org/spec/SACM/2.2/About-SACM/  
-[2]. https://www.eclipse.org/epsilon/
+[2]. https://www.eclipse.org/epsilon/  
 [3]. https://www.eclipse.org/papyrus/
