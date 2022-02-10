@@ -2,6 +2,8 @@
  */
 package artifact.impl;
 
+import argumentation.Argumentation_Package;
+import argumentation.impl.Argumentation_PackageImpl;
 import artifact.Activity;
 import artifact.Artifact;
 import artifact.ArtifactAsset;
@@ -18,7 +20,11 @@ import artifact.Property;
 import artifact.Resource;
 import artifact.Technique;
 
+import assuranceCase.AssuranceCase_Package;
+import assuranceCase.impl.AssuranceCase_PackageImpl;
 import base.Base_Package;
+
+import base.impl.Base_PackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -26,6 +32,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import terminology.Terminology_Package;
+import terminology.impl.Terminology_PackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -172,14 +180,29 @@ public class Artifact_PackageImpl extends EPackageImpl implements Artifact_Packa
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		Base_Package.eINSTANCE.eClass();
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AssuranceCase_Package.eNS_URI);
+		AssuranceCase_PackageImpl theAssuranceCase_Package = (AssuranceCase_PackageImpl)(registeredPackage instanceof AssuranceCase_PackageImpl ? registeredPackage : AssuranceCase_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Base_Package.eNS_URI);
+		Base_PackageImpl theBase_Package = (Base_PackageImpl)(registeredPackage instanceof Base_PackageImpl ? registeredPackage : Base_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Argumentation_Package.eNS_URI);
+		Argumentation_PackageImpl theArgumentation_Package = (Argumentation_PackageImpl)(registeredPackage instanceof Argumentation_PackageImpl ? registeredPackage : Argumentation_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Terminology_Package.eNS_URI);
+		Terminology_PackageImpl theTerminology_Package = (Terminology_PackageImpl)(registeredPackage instanceof Terminology_PackageImpl ? registeredPackage : Terminology_Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theArtifact_Package.createPackageContents();
+		theAssuranceCase_Package.createPackageContents();
+		theBase_Package.createPackageContents();
+		theArgumentation_Package.createPackageContents();
+		theTerminology_Package.createPackageContents();
 
 		// Initialize created meta-data
 		theArtifact_Package.initializePackageContents();
+		theAssuranceCase_Package.initializePackageContents();
+		theBase_Package.initializePackageContents();
+		theArgumentation_Package.initializePackageContents();
+		theTerminology_Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theArtifact_Package.freeze();
@@ -223,6 +246,15 @@ public class Artifact_PackageImpl extends EPackageImpl implements Artifact_Packa
 	 */
 	public EReference getArtifactPackage_ArtifactElement() {
 		return (EReference)artifactPackageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArtifactPackage_Interface() {
+		return (EReference)artifactPackageEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -447,6 +479,7 @@ public class Artifact_PackageImpl extends EPackageImpl implements Artifact_Packa
 
 		artifactPackageEClass = createEClass(ARTIFACT_PACKAGE);
 		createEReference(artifactPackageEClass, ARTIFACT_PACKAGE__ARTIFACT_ELEMENT);
+		createEReference(artifactPackageEClass, ARTIFACT_PACKAGE__INTERFACE);
 
 		artifactPackageBindingEClass = createEClass(ARTIFACT_PACKAGE_BINDING);
 		createEReference(artifactPackageBindingEClass, ARTIFACT_PACKAGE_BINDING__PARTICIPANT_PACKAGE);
@@ -526,12 +559,13 @@ public class Artifact_PackageImpl extends EPackageImpl implements Artifact_Packa
 		artifactEClass.getESuperTypes().add(this.getArtifactAsset());
 		artifactAssetRelationshipEClass.getESuperTypes().add(this.getArtifactAsset());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(artifactGroupEClass, ArtifactGroup.class, "ArtifactGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArtifactGroup_ArtifactElement(), theBase_Package.getArtifactElement(), null, "artifactElement", null, 0, -1, ArtifactGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(artifactPackageEClass, ArtifactPackage.class, "ArtifactPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArtifactPackage_ArtifactElement(), theBase_Package.getArtifactElement(), null, "artifactElement", null, 0, -1, ArtifactPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArtifactPackage_Interface(), this.getArtifactPackageInterface(), null, "interface", null, 0, -1, ArtifactPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(artifactPackageBindingEClass, ArtifactPackageBinding.class, "ArtifactPackageBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArtifactPackageBinding_ParticipantPackage(), this.getArtifactPackage(), null, "participantPackage", null, 2, -1, ArtifactPackageBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

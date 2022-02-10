@@ -22,7 +22,13 @@ import argumentation.Assertion;
 import argumentation.AssertionDeclaration;
 import argumentation.Claim;
 
+import artifact.Artifact_Package;
+import artifact.impl.Artifact_PackageImpl;
+import assuranceCase.AssuranceCase_Package;
+import assuranceCase.impl.AssuranceCase_PackageImpl;
 import base.Base_Package;
+
+import base.impl.Base_PackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -31,6 +37,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import terminology.Terminology_Package;
+import terminology.impl.Terminology_PackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -186,7 +194,7 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Argumentation_Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -200,23 +208,38 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 		if (isInited) return (Argumentation_Package)EPackage.Registry.INSTANCE.getEPackage(Argumentation_Package.eNS_URI);
 
 		// Obtain or create and register package
-		Argumentation_PackageImpl theArgumentation_Package = (Argumentation_PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Argumentation_PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Argumentation_PackageImpl());
+		Object registeredArgumentation_Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Argumentation_PackageImpl theArgumentation_Package = registeredArgumentation_Package instanceof Argumentation_PackageImpl ? (Argumentation_PackageImpl)registeredArgumentation_Package : new Argumentation_PackageImpl();
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		Base_Package.eINSTANCE.eClass();
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AssuranceCase_Package.eNS_URI);
+		AssuranceCase_PackageImpl theAssuranceCase_Package = (AssuranceCase_PackageImpl)(registeredPackage instanceof AssuranceCase_PackageImpl ? registeredPackage : AssuranceCase_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Base_Package.eNS_URI);
+		Base_PackageImpl theBase_Package = (Base_PackageImpl)(registeredPackage instanceof Base_PackageImpl ? registeredPackage : Base_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Artifact_Package.eNS_URI);
+		Artifact_PackageImpl theArtifact_Package = (Artifact_PackageImpl)(registeredPackage instanceof Artifact_PackageImpl ? registeredPackage : Artifact_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Terminology_Package.eNS_URI);
+		Terminology_PackageImpl theTerminology_Package = (Terminology_PackageImpl)(registeredPackage instanceof Terminology_PackageImpl ? registeredPackage : Terminology_Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theArgumentation_Package.createPackageContents();
+		theAssuranceCase_Package.createPackageContents();
+		theBase_Package.createPackageContents();
+		theArtifact_Package.createPackageContents();
+		theTerminology_Package.createPackageContents();
 
 		// Initialize created meta-data
 		theArgumentation_Package.initializePackageContents();
+		theAssuranceCase_Package.initializePackageContents();
+		theBase_Package.initializePackageContents();
+		theArtifact_Package.initializePackageContents();
+		theTerminology_Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theArgumentation_Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Argumentation_Package.eNS_URI, theArgumentation_Package);
 		return theArgumentation_Package;
@@ -229,15 +252,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 	 */
 	public EClass getArgumentationElement() {
 		return argumentationElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getArgumentationElement_Uninstantiated() {
-		return (EAttribute)argumentationElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -274,6 +288,15 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 	 */
 	public EReference getArgumentPackage_ArgumentationElement() {
 		return (EReference)argumentPackageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArgumentPackage_Interface() {
+		return (EReference)argumentPackageEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -319,15 +342,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 	 */
 	public EClass getArgumentAsset() {
 		return argumentAssetEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getArgumentAsset_Content() {
-		return (EReference)argumentAssetEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -434,15 +448,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssertedRelationship_Requies() {
-		return (EAttribute)assertedRelationshipEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getArtifactReference() {
 		return artifactReferenceEClass;
 	}
@@ -539,13 +544,13 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 
 		// Create classes and their features
 		argumentationElementEClass = createEClass(ARGUMENTATION_ELEMENT);
-		createEAttribute(argumentationElementEClass, ARGUMENTATION_ELEMENT__UNINSTANTIATED);
 
 		argumentGroupEClass = createEClass(ARGUMENT_GROUP);
 		createEReference(argumentGroupEClass, ARGUMENT_GROUP__ARGUMENTATION_ELEMENT);
 
 		argumentPackageEClass = createEClass(ARGUMENT_PACKAGE);
 		createEReference(argumentPackageEClass, ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT);
+		createEReference(argumentPackageEClass, ARGUMENT_PACKAGE__INTERFACE);
 
 		argumentPackageInterfaceEClass = createEClass(ARGUMENT_PACKAGE_INTERFACE);
 		createEReference(argumentPackageInterfaceEClass, ARGUMENT_PACKAGE_INTERFACE__IMPLEMENTS);
@@ -554,7 +559,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 		createEReference(argumentPackageBindingEClass, ARGUMENT_PACKAGE_BINDING__PARTICIPANT_PACKAGE);
 
 		argumentAssetEClass = createEClass(ARGUMENT_ASSET);
-		createEReference(argumentAssetEClass, ARGUMENT_ASSET__CONTENT);
 
 		assertionEClass = createEClass(ASSERTION);
 		createEAttribute(assertionEClass, ASSERTION__ASSERTION_DECLARATION);
@@ -570,7 +574,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 		createEReference(assertedRelationshipEClass, ASSERTED_RELATIONSHIP__SOURCE);
 		createEReference(assertedRelationshipEClass, ASSERTED_RELATIONSHIP__TARGET);
 		createEReference(assertedRelationshipEClass, ASSERTED_RELATIONSHIP__REASONING);
-		createEAttribute(assertedRelationshipEClass, ASSERTED_RELATIONSHIP__REQUIES);
 
 		artifactReferenceEClass = createEClass(ARTIFACT_REFERENCE);
 		createEReference(artifactReferenceEClass, ARTIFACT_REFERENCE__REFERENCED_ARTIFACT_ELEMENT);
@@ -637,15 +640,15 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 		assertedContextEClass.getESuperTypes().add(this.getAssertedRelationship());
 		assertedArtifactContextEClass.getESuperTypes().add(this.getAssertedRelationship());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(argumentationElementEClass, ArgumentationElement.class, "ArgumentationElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArgumentationElement_Uninstantiated(), ecorePackage.getEBoolean(), "uninstantiated", "false", 1, 1, ArgumentationElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentGroupEClass, ArgumentGroup.class, "ArgumentGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArgumentGroup_ArgumentationElement(), this.getArgumentationElement(), null, "argumentationElement", null, 0, -1, ArgumentGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentPackageEClass, ArgumentPackage.class, "ArgumentPackage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArgumentPackage_ArgumentationElement(), this.getArgumentationElement(), null, "argumentationElement", null, 0, -1, ArgumentPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArgumentPackage_Interface(), this.getArgumentPackageInterface(), null, "interface", null, 0, -1, ArgumentPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentPackageInterfaceEClass, ArgumentPackageInterface.class, "ArgumentPackageInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArgumentPackageInterface_Implements(), this.getArgumentPackage(), null, "implements", null, 1, 1, ArgumentPackageInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -654,7 +657,6 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 		initEReference(getArgumentPackageBinding_ParticipantPackage(), this.getArgumentPackage(), null, "participantPackage", null, 2, -1, ArgumentPackageBinding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentAssetEClass, ArgumentAsset.class, "ArgumentAsset", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArgumentAsset_Content(), theBase_Package.getMultiLangString(), null, "content", null, 0, 1, ArgumentAsset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assertionEClass, Assertion.class, "Assertion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssertion_AssertionDeclaration(), this.getAssertionDeclaration(), "assertionDeclaration", "asserted", 1, 1, Assertion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -667,10 +669,9 @@ public class Argumentation_PackageImpl extends EPackageImpl implements Argumenta
 
 		initEClass(assertedRelationshipEClass, AssertedRelationship.class, "AssertedRelationship", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAssertedRelationship_IsCounter(), ecorePackage.getEBoolean(), "isCounter", "false", 1, 1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssertedRelationship_Source(), this.getArgumentAsset(), null, "source", null, 1, -1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAssertedRelationship_Target(), this.getArgumentAsset(), null, "target", null, 1, -1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssertedRelationship_Source(), this.getArgumentAsset(), null, "source", null, 0, -1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssertedRelationship_Target(), this.getArgumentAsset(), null, "target", null, 0, -1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssertedRelationship_Reasoning(), this.getArgumentReasoning(), null, "reasoning", null, 0, 1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssertedRelationship_Requies(), ecorePackage.getEInt(), "requies", "0", 0, 1, AssertedRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(artifactReferenceEClass, ArtifactReference.class, "ArtifactReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArtifactReference_ReferencedArtifactElement(), theBase_Package.getArtifactElement(), null, "referencedArtifactElement", null, 0, -1, ArtifactReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

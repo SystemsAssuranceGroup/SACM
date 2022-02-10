@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="artifact" nsURI="http://omg.sacm/2.0/artifact" nsPrefix="artifact_">
-  <eClassifiers xsi:type="ecore:EClass" name="ArtifactGroup" eSuperTypes="base.ecore#//ArtifactElement">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="artifact" nsURI="http://omg.sacm/2.3/artifact" nsPrefix="artifact_">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactGroup" eSuperTypes="http://omg.sacm/2.3/base#//ArtifactElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactElement" upperBound="-1"
-        eType="ecore:EClass base.ecore#//ArtifactElement"/>
+        eType="ecore:EClass http://omg.sacm/2.3/base#//ArtifactElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArtifactPackage" eSuperTypes="base.ecore#//ArtifactElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactPackage" eSuperTypes="http://omg.sacm/2.3/base#//ArtifactElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactElement" upperBound="-1"
-        eType="ecore:EClass base.ecore#//ArtifactElement" containment="true"/>
+        eType="ecore:EClass http://omg.sacm/2.3/base#//ArtifactElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
+        eType="#//ArtifactPackageInterface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArtifactPackageBinding" eSuperTypes="#//ArtifactPackage">
     <eStructuralFeatures xsi:type="ecore:EReference" name="participantPackage" lowerBound="2"
@@ -17,7 +19,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="implements" lowerBound="1"
         eType="#//ArtifactPackage"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArtifactAsset" abstract="true" eSuperTypes="base.ecore#//ArtifactElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactAsset" abstract="true" eSuperTypes="http://omg.sacm/2.3/base#//ArtifactElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="artifactProperty" upperBound="-1"
         eType="#//Property" containment="true"/>
   </eClassifiers>

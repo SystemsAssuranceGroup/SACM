@@ -1,6 +1,6 @@
-@namespace(uri="http://omg.sacm/2.0/artifact", prefix="artifact_")
+@namespace(uri="http://omg.sacm/2.3/artifact", prefix="artifact_")
 package artifact;
-import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
+import "http://omg.sacm/2.3/base";
 
   class ArtifactGroup extends base.ArtifactElement {
     ref base.ArtifactElement[*] artifactElement;
@@ -8,6 +8,7 @@ import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
 
   class ArtifactPackage extends base.ArtifactElement {
     val base.ArtifactElement[*] artifactElement;
+    ref ArtifactPackageInterface[*] ~interface;
   }
 
   class ArtifactPackageBinding extends ArtifactPackage {

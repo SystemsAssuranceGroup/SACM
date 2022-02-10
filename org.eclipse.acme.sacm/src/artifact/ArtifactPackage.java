@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link artifact.ArtifactPackage#getArtifactElement <em>Artifact Element</em>}</li>
+ *   <li>{@link artifact.ArtifactPackage#getInterface <em>Interface</em>}</li>
  * </ul>
  *
  * @see artifact.Artifact_Package#getArtifactPackage()
@@ -38,5 +39,21 @@ public interface ArtifactPackage extends ArtifactElement {
 	 * @generated
 	 */
 	EList<ArtifactElement> getArtifactElement();
+
+	/**
+	 * Returns the value of the '<em><b>Interface</b></em>' reference list.
+	 * The list contents are of type {@link artifact.ArtifactPackageInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interface</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interface</em>' reference list.
+	 * @see artifact.Artifact_Package#getArtifactPackage_Interface()
+	 * @model
+	 * @generated
+	 */
+	EList<ArtifactPackageInterface> getInterface();
 
 } // ArtifactPackage

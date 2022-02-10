@@ -3,6 +3,7 @@
 package argumentation.impl;
 
 import argumentation.ArgumentPackage;
+import argumentation.ArgumentPackageInterface;
 import argumentation.ArgumentationElement;
 import argumentation.Argumentation_Package;
 
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -27,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link argumentation.impl.ArgumentPackageImpl#getArgumentationElement <em>Argumentation Element</em>}</li>
+ *   <li>{@link argumentation.impl.ArgumentPackageImpl#getInterface <em>Interface</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +44,16 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 	 * @ordered
 	 */
 	protected EList<ArgumentationElement> argumentationElement;
+
+	/**
+	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ArgumentPackageInterface> interface_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,6 +91,18 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ArgumentPackageInterface> getInterface() {
+		if (interface_ == null) {
+			interface_ = new EObjectResolvingEList<ArgumentPackageInterface>(ArgumentPackageInterface.class, this, Argumentation_Package.ARGUMENT_PACKAGE__INTERFACE);
+		}
+		return interface_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -97,6 +122,8 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 		switch (featureID) {
 			case Argumentation_Package.ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT:
 				return getArgumentationElement();
+			case Argumentation_Package.ARGUMENT_PACKAGE__INTERFACE:
+				return getInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,6 +141,10 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 				getArgumentationElement().clear();
 				getArgumentationElement().addAll((Collection<? extends ArgumentationElement>)newValue);
 				return;
+			case Argumentation_Package.ARGUMENT_PACKAGE__INTERFACE:
+				getInterface().clear();
+				getInterface().addAll((Collection<? extends ArgumentPackageInterface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -129,6 +160,9 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 			case Argumentation_Package.ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT:
 				getArgumentationElement().clear();
 				return;
+			case Argumentation_Package.ARGUMENT_PACKAGE__INTERFACE:
+				getInterface().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +177,8 @@ public class ArgumentPackageImpl extends ArgumentationElementImpl implements Arg
 		switch (featureID) {
 			case Argumentation_Package.ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT:
 				return argumentationElement != null && !argumentationElement.isEmpty();
+			case Argumentation_Package.ARGUMENT_PACKAGE__INTERFACE:
+				return interface_ != null && !interface_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

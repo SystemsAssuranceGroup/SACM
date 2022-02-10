@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -40,7 +39,7 @@ public interface Terminology_Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://omg.sacm/2.0/terminology";
+	String eNS_URI = "http://omg.sacm/2.3/terminology";
 
 	/**
 	 * The package namespace name.
@@ -168,15 +167,6 @@ public interface Terminology_Package extends EPackage {
 	int TERMINOLOGY_ELEMENT_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Terminology Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_ELEMENT_OPERATION_COUNT = Base_Package.ARTIFACT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link terminology.impl.TerminologyGroupImpl <em>Terminology Group</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -295,15 +285,6 @@ public interface Terminology_Package extends EPackage {
 	int TERMINOLOGY_GROUP_FEATURE_COUNT = TERMINOLOGY_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Terminology Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_GROUP_OPERATION_COUNT = TERMINOLOGY_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link terminology.impl.TerminologyPackageImpl <em>Terminology Package</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -420,15 +401,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int TERMINOLOGY_PACKAGE_FEATURE_COUNT = TERMINOLOGY_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Terminology Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_PACKAGE_OPERATION_COUNT = TERMINOLOGY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link terminology.impl.TerminologyPackageBindingImpl <em>Terminology Package Binding</em>}' class.
@@ -558,15 +530,6 @@ public interface Terminology_Package extends EPackage {
 	int TERMINOLOGY_PACKAGE_BINDING_FEATURE_COUNT = TERMINOLOGY_PACKAGE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Terminology Package Binding</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_PACKAGE_BINDING_OPERATION_COUNT = TERMINOLOGY_PACKAGE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link terminology.impl.TerminologyPackageInterfaceImpl <em>Terminology Package Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -694,15 +657,6 @@ public interface Terminology_Package extends EPackage {
 	int TERMINOLOGY_PACKAGE_INTERFACE_FEATURE_COUNT = TERMINOLOGY_PACKAGE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Terminology Package Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_PACKAGE_INTERFACE_OPERATION_COUNT = TERMINOLOGY_PACKAGE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link terminology.impl.TerminologyAssetImpl <em>Terminology Asset</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,15 +764,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int TERMINOLOGY_ASSET_FEATURE_COUNT = TERMINOLOGY_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Terminology Asset</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERMINOLOGY_ASSET_OPERATION_COUNT = TERMINOLOGY_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link terminology.impl.CategoryImpl <em>Category</em>}' class.
@@ -937,15 +882,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int CATEGORY_FEATURE_COUNT = TERMINOLOGY_ASSET_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Category</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CATEGORY_OPERATION_COUNT = TERMINOLOGY_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link terminology.impl.ExpressionElementImpl <em>Expression Element</em>}' class.
@@ -1073,15 +1009,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int EXPRESSION_ELEMENT_FEATURE_COUNT = TERMINOLOGY_ASSET_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Expression Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_ELEMENT_OPERATION_COUNT = TERMINOLOGY_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link terminology.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -1218,15 +1145,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int EXPRESSION_FEATURE_COUNT = EXPRESSION_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_OPERATION_COUNT = EXPRESSION_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link terminology.impl.TermImpl <em>Term</em>}' class.
@@ -1372,15 +1290,6 @@ public interface Terminology_Package extends EPackage {
 	 * @ordered
 	 */
 	int TERM_FEATURE_COUNT = EXPRESSION_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Term</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TERM_OPERATION_COUNT = EXPRESSION_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1608,7 +1517,6 @@ public interface Terminology_Package extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>

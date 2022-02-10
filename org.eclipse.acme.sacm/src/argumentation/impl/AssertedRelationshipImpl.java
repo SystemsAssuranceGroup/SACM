@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link argumentation.impl.AssertedRelationshipImpl#getSource <em>Source</em>}</li>
  *   <li>{@link argumentation.impl.AssertedRelationshipImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link argumentation.impl.AssertedRelationshipImpl#getReasoning <em>Reasoning</em>}</li>
- *   <li>{@link argumentation.impl.AssertedRelationshipImpl#getRequies <em>Requies</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,26 +86,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 	 * @ordered
 	 */
 	protected ArgumentReasoning reasoning;
-
-	/**
-	 * The default value of the '{@link #getRequies() <em>Requies</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequies()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int REQUIES_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getRequies() <em>Requies</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequies()
-	 * @generated
-	 * @ordered
-	 */
-	protected int requies = REQUIES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,27 +194,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getRequies() {
-		return requies;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRequies(int newRequies) {
-		int oldRequies = requies;
-		requies = newRequies;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Argumentation_Package.ASSERTED_RELATIONSHIP__REQUIES, oldRequies, requies));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -248,8 +206,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 			case Argumentation_Package.ASSERTED_RELATIONSHIP__REASONING:
 				if (resolve) return getReasoning();
 				return basicGetReasoning();
-			case Argumentation_Package.ASSERTED_RELATIONSHIP__REQUIES:
-				return getRequies();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -277,9 +233,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 			case Argumentation_Package.ASSERTED_RELATIONSHIP__REASONING:
 				setReasoning((ArgumentReasoning)newValue);
 				return;
-			case Argumentation_Package.ASSERTED_RELATIONSHIP__REQUIES:
-				setRequies((Integer)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -304,9 +257,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 			case Argumentation_Package.ASSERTED_RELATIONSHIP__REASONING:
 				setReasoning((ArgumentReasoning)null);
 				return;
-			case Argumentation_Package.ASSERTED_RELATIONSHIP__REQUIES:
-				setRequies(REQUIES_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -327,8 +277,6 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 				return target != null && !target.isEmpty();
 			case Argumentation_Package.ASSERTED_RELATIONSHIP__REASONING:
 				return reasoning != null;
-			case Argumentation_Package.ASSERTED_RELATIONSHIP__REQUIES:
-				return requies != REQUIES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -342,11 +290,9 @@ public abstract class AssertedRelationshipImpl extends AssertionImpl implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isCounter: ");
 		result.append(isCounter);
-		result.append(", requies: ");
-		result.append(requies);
 		result.append(')');
 		return result.toString();
 	}

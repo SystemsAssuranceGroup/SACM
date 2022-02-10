@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -41,7 +40,7 @@ public interface Argumentation_Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://omg.sacm/2.0/argumentation";
+	String eNS_URI = "http://omg.sacm/2.3/argumentation";
 
 	/**
 	 * The package namespace name.
@@ -160,31 +159,13 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENTATION_ELEMENT__TAGGED_VALUE = Base_Package.ARTIFACT_ELEMENT__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENTATION_ELEMENT__UNINSTANTIATED = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Argumentation Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENTATION_ELEMENT_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argumentation Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENTATION_ELEMENT_OPERATION_COUNT = Base_Package.ARTIFACT_ELEMENT_OPERATION_COUNT + 0;
+	int ARGUMENTATION_ELEMENT_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentGroupImpl <em>Argument Group</em>}' class.
@@ -287,15 +268,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_GROUP__TAGGED_VALUE = ARGUMENTATION_ELEMENT__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_GROUP__UNINSTANTIATED = ARGUMENTATION_ELEMENT__UNINSTANTIATED;
-
-	/**
 	 * The feature id for the '<em><b>Argumentation Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,15 +284,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_GROUP_FEATURE_COUNT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_GROUP_OPERATION_COUNT = ARGUMENTATION_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentPackageImpl <em>Argument Package</em>}' class.
@@ -423,15 +386,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_PACKAGE__TAGGED_VALUE = ARGUMENTATION_ELEMENT__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE__UNINSTANTIATED = ARGUMENTATION_ELEMENT__UNINSTANTIATED;
-
-	/**
 	 * The feature id for the '<em><b>Argumentation Element</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -441,22 +395,22 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_PACKAGE__INTERFACE = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Argument Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT_PACKAGE_FEATURE_COUNT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE_OPERATION_COUNT = ARGUMENTATION_ELEMENT_OPERATION_COUNT + 0;
+	int ARGUMENT_PACKAGE_FEATURE_COUNT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentPackageInterfaceImpl <em>Argument Package Interface</em>}' class.
@@ -559,15 +513,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_PACKAGE_INTERFACE__TAGGED_VALUE = ARGUMENT_PACKAGE__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE_INTERFACE__UNINSTANTIATED = ARGUMENT_PACKAGE__UNINSTANTIATED;
-
-	/**
 	 * The feature id for the '<em><b>Argumentation Element</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -575,6 +520,15 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_PACKAGE_INTERFACE__ARGUMENTATION_ELEMENT = ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_PACKAGE_INTERFACE__INTERFACE = ARGUMENT_PACKAGE__INTERFACE;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -593,15 +547,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_PACKAGE_INTERFACE_FEATURE_COUNT = ARGUMENT_PACKAGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Package Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE_INTERFACE_OPERATION_COUNT = ARGUMENT_PACKAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentPackageBindingImpl <em>Argument Package Binding</em>}' class.
@@ -704,15 +649,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_PACKAGE_BINDING__TAGGED_VALUE = ARGUMENT_PACKAGE__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE_BINDING__UNINSTANTIATED = ARGUMENT_PACKAGE__UNINSTANTIATED;
-
-	/**
 	 * The feature id for the '<em><b>Argumentation Element</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -720,6 +656,15 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_PACKAGE_BINDING__ARGUMENTATION_ELEMENT = ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_PACKAGE_BINDING__INTERFACE = ARGUMENT_PACKAGE__INTERFACE;
 
 	/**
 	 * The feature id for the '<em><b>Participant Package</b></em>' reference list.
@@ -738,15 +683,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_PACKAGE_BINDING_FEATURE_COUNT = ARGUMENT_PACKAGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Package Binding</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_PACKAGE_BINDING_OPERATION_COUNT = ARGUMENT_PACKAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentAssetImpl <em>Argument Asset</em>}' class.
@@ -849,40 +785,13 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_ASSET__TAGGED_VALUE = ARGUMENTATION_ELEMENT__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_ASSET__UNINSTANTIATED = ARGUMENTATION_ELEMENT__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_ASSET__CONTENT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Argument Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT_ASSET_FEATURE_COUNT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Asset</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_ASSET_OPERATION_COUNT = ARGUMENTATION_ELEMENT_OPERATION_COUNT + 0;
+	int ARGUMENT_ASSET_FEATURE_COUNT = ARGUMENTATION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertionImpl <em>Assertion</em>}' class.
@@ -985,24 +894,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTION__TAGGED_VALUE = ARGUMENT_ASSET__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTION__UNINSTANTIATED = ARGUMENT_ASSET__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTION__CONTENT = ARGUMENT_ASSET__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1028,15 +919,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTION_FEATURE_COUNT = ARGUMENT_ASSET_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Assertion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTION_OPERATION_COUNT = ARGUMENT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArgumentReasoningImpl <em>Argument Reasoning</em>}' class.
@@ -1139,24 +1021,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARGUMENT_REASONING__TAGGED_VALUE = ARGUMENT_ASSET__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_REASONING__UNINSTANTIATED = ARGUMENT_ASSET__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_REASONING__CONTENT = ARGUMENT_ASSET__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Structure</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1173,15 +1037,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARGUMENT_REASONING_FEATURE_COUNT = ARGUMENT_ASSET_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Argument Reasoning</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT_REASONING_OPERATION_COUNT = ARGUMENT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ClaimImpl <em>Claim</em>}' class.
@@ -1284,24 +1139,6 @@ public interface Argumentation_Package extends EPackage {
 	int CLAIM__TAGGED_VALUE = ASSERTION__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLAIM__UNINSTANTIATED = ASSERTION__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLAIM__CONTENT = ASSERTION__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1327,15 +1164,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int CLAIM_FEATURE_COUNT = ASSERTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Claim</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLAIM_OPERATION_COUNT = ASSERTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedRelationshipImpl <em>Asserted Relationship</em>}' class.
@@ -1438,24 +1266,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_RELATIONSHIP__TAGGED_VALUE = ASSERTION__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_RELATIONSHIP__UNINSTANTIATED = ASSERTION__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_RELATIONSHIP__CONTENT = ASSERTION__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1510,31 +1320,13 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_RELATIONSHIP__REASONING = ASSERTION_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_RELATIONSHIP__REQUIES = ASSERTION_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Relationship</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSERTED_RELATIONSHIP_FEATURE_COUNT = ASSERTION_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of operations of the '<em>Asserted Relationship</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_RELATIONSHIP_OPERATION_COUNT = ASSERTION_OPERATION_COUNT + 0;
+	int ASSERTED_RELATIONSHIP_FEATURE_COUNT = ASSERTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.ArtifactReferenceImpl <em>Artifact Reference</em>}' class.
@@ -1637,24 +1429,6 @@ public interface Argumentation_Package extends EPackage {
 	int ARTIFACT_REFERENCE__TAGGED_VALUE = ARGUMENT_ASSET__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_REFERENCE__UNINSTANTIATED = ARGUMENT_ASSET__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_REFERENCE__CONTENT = ARGUMENT_ASSET__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Referenced Artifact Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1671,15 +1445,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARTIFACT_REFERENCE_FEATURE_COUNT = ARGUMENT_ASSET_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Artifact Reference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_REFERENCE_OPERATION_COUNT = ARGUMENT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedArtifactSupportImpl <em>Asserted Artifact Support</em>}' class.
@@ -1782,24 +1547,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_ARTIFACT_SUPPORT__TAGGED_VALUE = ASSERTED_RELATIONSHIP__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_SUPPORT__UNINSTANTIATED = ASSERTED_RELATIONSHIP__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_SUPPORT__CONTENT = ASSERTED_RELATIONSHIP__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1854,15 +1601,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_ARTIFACT_SUPPORT__REASONING = ASSERTED_RELATIONSHIP__REASONING;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_SUPPORT__REQUIES = ASSERTED_RELATIONSHIP__REQUIES;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Artifact Support</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1870,15 +1608,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTED_ARTIFACT_SUPPORT_FEATURE_COUNT = ASSERTED_RELATIONSHIP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asserted Artifact Support</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_SUPPORT_OPERATION_COUNT = ASSERTED_RELATIONSHIP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedInferenceImpl <em>Asserted Inference</em>}' class.
@@ -1981,24 +1710,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_INFERENCE__TAGGED_VALUE = ASSERTED_RELATIONSHIP__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_INFERENCE__UNINSTANTIATED = ASSERTED_RELATIONSHIP__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_INFERENCE__CONTENT = ASSERTED_RELATIONSHIP__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2053,15 +1764,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_INFERENCE__REASONING = ASSERTED_RELATIONSHIP__REASONING;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_INFERENCE__REQUIES = ASSERTED_RELATIONSHIP__REQUIES;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Inference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2069,15 +1771,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTED_INFERENCE_FEATURE_COUNT = ASSERTED_RELATIONSHIP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asserted Inference</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_INFERENCE_OPERATION_COUNT = ASSERTED_RELATIONSHIP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedEvidenceImpl <em>Asserted Evidence</em>}' class.
@@ -2180,24 +1873,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_EVIDENCE__TAGGED_VALUE = ASSERTED_RELATIONSHIP__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_EVIDENCE__UNINSTANTIATED = ASSERTED_RELATIONSHIP__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_EVIDENCE__CONTENT = ASSERTED_RELATIONSHIP__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2252,15 +1927,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_EVIDENCE__REASONING = ASSERTED_RELATIONSHIP__REASONING;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_EVIDENCE__REQUIES = ASSERTED_RELATIONSHIP__REQUIES;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Evidence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2268,15 +1934,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTED_EVIDENCE_FEATURE_COUNT = ASSERTED_RELATIONSHIP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asserted Evidence</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_EVIDENCE_OPERATION_COUNT = ASSERTED_RELATIONSHIP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedContextImpl <em>Asserted Context</em>}' class.
@@ -2379,24 +2036,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_CONTEXT__TAGGED_VALUE = ASSERTED_RELATIONSHIP__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_CONTEXT__UNINSTANTIATED = ASSERTED_RELATIONSHIP__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_CONTEXT__CONTENT = ASSERTED_RELATIONSHIP__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2451,15 +2090,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_CONTEXT__REASONING = ASSERTED_RELATIONSHIP__REASONING;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_CONTEXT__REQUIES = ASSERTED_RELATIONSHIP__REQUIES;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2467,15 +2097,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTED_CONTEXT_FEATURE_COUNT = ASSERTED_RELATIONSHIP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asserted Context</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_CONTEXT_OPERATION_COUNT = ASSERTED_RELATIONSHIP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.impl.AssertedArtifactContextImpl <em>Asserted Artifact Context</em>}' class.
@@ -2578,24 +2199,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_ARTIFACT_CONTEXT__TAGGED_VALUE = ASSERTED_RELATIONSHIP__TAGGED_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Uninstantiated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_CONTEXT__UNINSTANTIATED = ASSERTED_RELATIONSHIP__UNINSTANTIATED;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_CONTEXT__CONTENT = ASSERTED_RELATIONSHIP__CONTENT;
-
-	/**
 	 * The feature id for the '<em><b>Assertion Declaration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2650,15 +2253,6 @@ public interface Argumentation_Package extends EPackage {
 	int ASSERTED_ARTIFACT_CONTEXT__REASONING = ASSERTED_RELATIONSHIP__REASONING;
 
 	/**
-	 * The feature id for the '<em><b>Requies</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_CONTEXT__REQUIES = ASSERTED_RELATIONSHIP__REQUIES;
-
-	/**
 	 * The number of structural features of the '<em>Asserted Artifact Context</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2666,15 +2260,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @ordered
 	 */
 	int ASSERTED_ARTIFACT_CONTEXT_FEATURE_COUNT = ASSERTED_RELATIONSHIP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Asserted Artifact Context</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSERTED_ARTIFACT_CONTEXT_OPERATION_COUNT = ASSERTED_RELATIONSHIP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link argumentation.AssertionDeclaration <em>Assertion Declaration</em>}' enum.
@@ -2696,17 +2281,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @generated
 	 */
 	EClass getArgumentationElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link argumentation.ArgumentationElement#isUninstantiated <em>Uninstantiated</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Uninstantiated</em>'.
-	 * @see argumentation.ArgumentationElement#isUninstantiated()
-	 * @see #getArgumentationElement()
-	 * @generated
-	 */
-	EAttribute getArgumentationElement_Uninstantiated();
 
 	/**
 	 * Returns the meta object for class '{@link argumentation.ArgumentGroup <em>Argument Group</em>}'.
@@ -2749,6 +2323,17 @@ public interface Argumentation_Package extends EPackage {
 	 * @generated
 	 */
 	EReference getArgumentPackage_ArgumentationElement();
+
+	/**
+	 * Returns the meta object for the reference list '{@link argumentation.ArgumentPackage#getInterface <em>Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interface</em>'.
+	 * @see argumentation.ArgumentPackage#getInterface()
+	 * @see #getArgumentPackage()
+	 * @generated
+	 */
+	EReference getArgumentPackage_Interface();
 
 	/**
 	 * Returns the meta object for class '{@link argumentation.ArgumentPackageInterface <em>Argument Package Interface</em>}'.
@@ -2801,17 +2386,6 @@ public interface Argumentation_Package extends EPackage {
 	 * @generated
 	 */
 	EClass getArgumentAsset();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link argumentation.ArgumentAsset#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Content</em>'.
-	 * @see argumentation.ArgumentAsset#getContent()
-	 * @see #getArgumentAsset()
-	 * @generated
-	 */
-	EReference getArgumentAsset_Content();
 
 	/**
 	 * Returns the meta object for class '{@link argumentation.Assertion <em>Assertion</em>}'.
@@ -2931,17 +2505,6 @@ public interface Argumentation_Package extends EPackage {
 	EReference getAssertedRelationship_Reasoning();
 
 	/**
-	 * Returns the meta object for the attribute '{@link argumentation.AssertedRelationship#getRequies <em>Requies</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Requies</em>'.
-	 * @see argumentation.AssertedRelationship#getRequies()
-	 * @see #getAssertedRelationship()
-	 * @generated
-	 */
-	EAttribute getAssertedRelationship_Requies();
-
-	/**
 	 * Returns the meta object for class '{@link argumentation.ArtifactReference <em>Artifact Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3037,7 +2600,6 @@ public interface Argumentation_Package extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -3054,14 +2616,6 @@ public interface Argumentation_Package extends EPackage {
 		 * @generated
 		 */
 		EClass ARGUMENTATION_ELEMENT = eINSTANCE.getArgumentationElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Uninstantiated</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ARGUMENTATION_ELEMENT__UNINSTANTIATED = eINSTANCE.getArgumentationElement_Uninstantiated();
 
 		/**
 		 * The meta object literal for the '{@link argumentation.impl.ArgumentGroupImpl <em>Argument Group</em>}' class.
@@ -3098,6 +2652,14 @@ public interface Argumentation_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ARGUMENT_PACKAGE__ARGUMENTATION_ELEMENT = eINSTANCE.getArgumentPackage_ArgumentationElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT_PACKAGE__INTERFACE = eINSTANCE.getArgumentPackage_Interface();
 
 		/**
 		 * The meta object literal for the '{@link argumentation.impl.ArgumentPackageInterfaceImpl <em>Argument Package Interface</em>}' class.
@@ -3144,14 +2706,6 @@ public interface Argumentation_Package extends EPackage {
 		 * @generated
 		 */
 		EClass ARGUMENT_ASSET = eINSTANCE.getArgumentAsset();
-
-		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARGUMENT_ASSET__CONTENT = eINSTANCE.getArgumentAsset_Content();
 
 		/**
 		 * The meta object literal for the '{@link argumentation.impl.AssertionImpl <em>Assertion</em>}' class.
@@ -3248,14 +2802,6 @@ public interface Argumentation_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ASSERTED_RELATIONSHIP__REASONING = eINSTANCE.getAssertedRelationship_Reasoning();
-
-		/**
-		 * The meta object literal for the '<em><b>Requies</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSERTED_RELATIONSHIP__REQUIES = eINSTANCE.getAssertedRelationship_Requies();
 
 		/**
 		 * The meta object literal for the '{@link argumentation.impl.ArtifactReferenceImpl <em>Artifact Reference</em>}' class.

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -40,7 +39,7 @@ public interface Artifact_Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://omg.sacm/2.0/artifact";
+	String eNS_URI = "http://omg.sacm/2.3/artifact";
 
 	/**
 	 * The package namespace name.
@@ -177,15 +176,6 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_GROUP_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Artifact Group</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_GROUP_OPERATION_COUNT = Base_Package.ARTIFACT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactPackageImpl <em>Artifact Package</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -295,22 +285,22 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_PACKAGE__ARTIFACT_ELEMENT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTIFACT_PACKAGE__INTERFACE = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Artifact Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARTIFACT_PACKAGE_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Artifact Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_PACKAGE_OPERATION_COUNT = Base_Package.ARTIFACT_ELEMENT_OPERATION_COUNT + 0;
+	int ARTIFACT_PACKAGE_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactPackageBindingImpl <em>Artifact Package Binding</em>}' class.
@@ -422,6 +412,15 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_PACKAGE_BINDING__ARTIFACT_ELEMENT = ARTIFACT_PACKAGE__ARTIFACT_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTIFACT_PACKAGE_BINDING__INTERFACE = ARTIFACT_PACKAGE__INTERFACE;
+
+	/**
 	 * The feature id for the '<em><b>Participant Package</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -438,15 +437,6 @@ public interface Artifact_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARTIFACT_PACKAGE_BINDING_FEATURE_COUNT = ARTIFACT_PACKAGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Artifact Package Binding</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_PACKAGE_BINDING_OPERATION_COUNT = ARTIFACT_PACKAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactPackageInterfaceImpl <em>Artifact Package Interface</em>}' class.
@@ -558,6 +548,15 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_PACKAGE_INTERFACE__ARTIFACT_ELEMENT = ARTIFACT_PACKAGE__ARTIFACT_ELEMENT;
 
 	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTIFACT_PACKAGE_INTERFACE__INTERFACE = ARTIFACT_PACKAGE__INTERFACE;
+
+	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -574,15 +573,6 @@ public interface Artifact_Package extends EPackage {
 	 * @ordered
 	 */
 	int ARTIFACT_PACKAGE_INTERFACE_FEATURE_COUNT = ARTIFACT_PACKAGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Artifact Package Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_PACKAGE_INTERFACE_OPERATION_COUNT = ARTIFACT_PACKAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactAssetImpl <em>Artifact Asset</em>}' class.
@@ -703,15 +693,6 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_ASSET_FEATURE_COUNT = Base_Package.ARTIFACT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Artifact Asset</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_ASSET_OPERATION_COUNT = Base_Package.ARTIFACT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.PropertyImpl <em>Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -828,15 +809,6 @@ public interface Artifact_Package extends EPackage {
 	 * @ordered
 	 */
 	int PROPERTY_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.TechniqueImpl <em>Technique</em>}' class.
@@ -957,15 +929,6 @@ public interface Artifact_Package extends EPackage {
 	int TECHNIQUE_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Technique</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECHNIQUE_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.ParticipantImpl <em>Participant</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1082,15 +1045,6 @@ public interface Artifact_Package extends EPackage {
 	 * @ordered
 	 */
 	int PARTICIPANT_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Participant</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARTICIPANT_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.ActivityImpl <em>Activity</em>}' class.
@@ -1229,15 +1183,6 @@ public interface Artifact_Package extends EPackage {
 	int ACTIVITY_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Activity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.EventImpl <em>Event</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1365,15 +1310,6 @@ public interface Artifact_Package extends EPackage {
 	int EVENT_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Event</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.ResourceImpl <em>Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1490,15 +1426,6 @@ public interface Artifact_Package extends EPackage {
 	 * @ordered
 	 */
 	int RESOURCE_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactImpl <em>Artifact</em>}' class.
@@ -1637,15 +1564,6 @@ public interface Artifact_Package extends EPackage {
 	int ARTIFACT_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Artifact</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link artifact.impl.ArtifactAssetRelationshipImpl <em>Artifact Asset Relationship</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1781,15 +1699,6 @@ public interface Artifact_Package extends EPackage {
 	 */
 	int ARTIFACT_ASSET_RELATIONSHIP_FEATURE_COUNT = ARTIFACT_ASSET_FEATURE_COUNT + 2;
 
-	/**
-	 * The number of operations of the '<em>Artifact Asset Relationship</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTIFACT_ASSET_RELATIONSHIP_OPERATION_COUNT = ARTIFACT_ASSET_OPERATION_COUNT + 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link artifact.ArtifactGroup <em>Artifact Group</em>}'.
@@ -1832,6 +1741,17 @@ public interface Artifact_Package extends EPackage {
 	 * @generated
 	 */
 	EReference getArtifactPackage_ArtifactElement();
+
+	/**
+	 * Returns the meta object for the reference list '{@link artifact.ArtifactPackage#getInterface <em>Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interface</em>'.
+	 * @see artifact.ArtifactPackage#getInterface()
+	 * @see #getArtifactPackage()
+	 * @generated
+	 */
+	EReference getArtifactPackage_Interface();
 
 	/**
 	 * Returns the meta object for class '{@link artifact.ArtifactPackageBinding <em>Artifact Package Binding</em>}'.
@@ -2068,7 +1988,6 @@ public interface Artifact_Package extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -2111,6 +2030,14 @@ public interface Artifact_Package extends EPackage {
 		 * @generated
 		 */
 		EReference ARTIFACT_PACKAGE__ARTIFACT_ELEMENT = eINSTANCE.getArtifactPackage_ArtifactElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARTIFACT_PACKAGE__INTERFACE = eINSTANCE.getArtifactPackage_Interface();
 
 		/**
 		 * The meta object literal for the '{@link artifact.impl.ArtifactPackageBindingImpl <em>Artifact Package Binding</em>}' class.

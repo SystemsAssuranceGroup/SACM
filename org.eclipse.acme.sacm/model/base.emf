@@ -1,31 +1,41 @@
-@namespace(uri="http://omg.sacm/2.0/base", prefix="base_")
+@namespace(uri="http://omg.sacm/2.3/base", prefix="base_")
 package base;
+import "http://omg.sacm/2.3/terminology";
+
   abstract class Element {
-  }
-
-  class LangString extends Element {
-    attr String lang;
-    attr String content;
-  }
-
-  class ExpressionLangString extends LangString {
-    val ArtifactElement expression;
-  }
-
-  class MultiLangString extends Element {
-    val LangString[+] value;
   }
 
   abstract class SACMElement extends Element {
     attr String gid;
     attr boolean isCitation = false;
     attr boolean isAbstract = false;
-    ref SACMElement citedElement;
-    ref SACMElement abstractForm;
+    ref SACMElement[0..1] citedElement;
+    ref SACMElement[0..1] abstractForm;
+  }
+  
+  abstract class ModelElement extends SACMElement {
+    val LangString[1] name;
+    val Description[0..1] description;
+    val ImplementationConstraint[*] implementationConstraint;
+    val Note[*] note;
+    val TaggedValue[*] taggedValue;
+  }
+  
+  class LangString extends Element {
+    attr String lang;
+    attr String content;
+  }
+
+  class ExpressionLangString extends LangString {
+    ref terminology.ExpressionElement expression;
+  }
+
+  class MultiLangString extends Element {
+    val LangString[+] value;
   }
 
   abstract class UtilityElement extends SACMElement {
-    val MultiLangString content;
+    val MultiLangString[1] content;
   }
 
   class Description extends UtilityElement {
@@ -39,14 +49,6 @@ package base;
 
   class TaggedValue extends UtilityElement {
     val MultiLangString[1] key;
-  }
-
-  abstract class ModelElement extends SACMElement {
-    val LangString name;
-    val Description description;
-    val ImplementationConstraint[*] implementationConstraint;
-    val Note[*] note;
-    val TaggedValue[*] taggedValue;
   }
 
   abstract class ArtifactElement extends ModelElement {

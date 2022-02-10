@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link argumentation.ArgumentPackage#getArgumentationElement <em>Argumentation Element</em>}</li>
+ *   <li>{@link argumentation.ArgumentPackage#getInterface <em>Interface</em>}</li>
  * </ul>
  *
  * @see argumentation.Argumentation_Package#getArgumentPackage()
@@ -36,5 +37,21 @@ public interface ArgumentPackage extends ArgumentationElement {
 	 * @generated
 	 */
 	EList<ArgumentationElement> getArgumentationElement();
+
+	/**
+	 * Returns the value of the '<em><b>Interface</b></em>' reference list.
+	 * The list contents are of type {@link argumentation.ArgumentPackageInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interface</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interface</em>' reference list.
+	 * @see argumentation.Argumentation_Package#getArgumentPackage_Interface()
+	 * @model
+	 * @generated
+	 */
+	EList<ArgumentPackageInterface> getInterface();
 
 } // ArgumentPackage

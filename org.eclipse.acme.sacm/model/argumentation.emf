@@ -1,7 +1,7 @@
-@namespace(uri="http://omg.sacm/2.0/argumentation", prefix="argumentation_")
+@namespace(uri="http://omg.sacm/2.3/argumentation", prefix="argumentation_")
 package argumentation;
 
-import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
+import "http://omg.sacm/2.3/base";
 
 enum AssertionDeclaration {
   asserted = 1;
@@ -13,7 +13,6 @@ enum AssertionDeclaration {
 }
 
 abstract class ArgumentationElement extends base.ArtifactElement {
-  attr boolean[1] uninstantiated = false;
 }
 
 class ArgumentGroup extends ArgumentationElement {
@@ -22,6 +21,7 @@ class ArgumentGroup extends ArgumentationElement {
 
 class ArgumentPackage extends ArgumentationElement {
   val ArgumentationElement[*] argumentationElement;
+  ref ArgumentPackageInterface[*] ~interface;
 }
 
 class ArgumentPackageInterface extends ArgumentPackage {
@@ -33,7 +33,6 @@ class ArgumentPackageBinding extends ArgumentPackage {
 }
 
 abstract class ArgumentAsset extends ArgumentationElement {
-  val base.MultiLangString content;
 }
 
 abstract class Assertion extends ArgumentAsset {
@@ -50,10 +49,9 @@ class Claim extends Assertion {
 
 abstract class AssertedRelationship extends Assertion {
   attr boolean[1] isCounter = false;
-  ref ArgumentAsset[+] source;
-  ref ArgumentAsset[+] target;
+  ref ArgumentAsset[0..*] source;
+  ref ArgumentAsset[0..*] target;
   ref ArgumentReasoning reasoning;
-  attr int requies = 0;
 }
 
 class ArtifactReference extends ArgumentAsset {

@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link argumentation.AssertedRelationship#getSource <em>Source</em>}</li>
  *   <li>{@link argumentation.AssertedRelationship#getTarget <em>Target</em>}</li>
  *   <li>{@link argumentation.AssertedRelationship#getReasoning <em>Reasoning</em>}</li>
- *   <li>{@link argumentation.AssertedRelationship#getRequies <em>Requies</em>}</li>
  * </ul>
  *
  * @see argumentation.Argumentation_Package#getAssertedRelationship()
@@ -63,7 +62,7 @@ public interface AssertedRelationship extends Assertion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference list.
 	 * @see argumentation.Argumentation_Package#getAssertedRelationship_Source()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<ArgumentAsset> getSource();
@@ -79,7 +78,7 @@ public interface AssertedRelationship extends Assertion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference list.
 	 * @see argumentation.Argumentation_Package#getAssertedRelationship_Target()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<ArgumentAsset> getTarget();
@@ -109,32 +108,5 @@ public interface AssertedRelationship extends Assertion {
 	 * @generated
 	 */
 	void setReasoning(ArgumentReasoning value);
-
-	/**
-	 * Returns the value of the '<em><b>Requies</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Requies</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requies</em>' attribute.
-	 * @see #setRequies(int)
-	 * @see argumentation.Argumentation_Package#getAssertedRelationship_Requies()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getRequies();
-
-	/**
-	 * Sets the value of the '{@link argumentation.AssertedRelationship#getRequies <em>Requies</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requies</em>' attribute.
-	 * @see #getRequies()
-	 * @generated
-	 */
-	void setRequies(int value);
 
 } // AssertedRelationship

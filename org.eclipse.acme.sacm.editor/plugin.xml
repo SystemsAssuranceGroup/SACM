@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated terminology -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="terminology.presentation.Terminology_ModelWizardID"
+            name="%_UI_Terminology_ModelWizard_label"
+            class="terminology.presentation.Terminology_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Terminology_ModelFile.gif">
+         <description>%_UI_Terminology_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated terminology -->
+      <editor
+            id="terminology.presentation.Terminology_EditorID"
+            name="%_UI_Terminology_Editor_label"
+            icon="icons/full/obj16/Terminology_ModelFile.gif"
+            extensions="terminology_"
+            class="terminology.presentation.Terminology_Editor"
+            contributorClass="terminology.presentation.Terminology_ActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated argumentation -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="argumentation.presentation.Argumentation_ModelWizardID"
+            name="%_UI_Argumentation_ModelWizard_label"
+            class="argumentation.presentation.Argumentation_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Argumentation_ModelFile.gif">
+         <description>%_UI_Argumentation_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated argumentation -->
+      <editor
+            id="argumentation.presentation.Argumentation_EditorID"
+            name="%_UI_Argumentation_Editor_label"
+            icon="icons/full/obj16/Argumentation_ModelFile.gif"
+            extensions="argumentation_"
+            class="argumentation.presentation.Argumentation_Editor"
+            contributorClass="argumentation.presentation.Argumentation_ActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated artifact -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="artifact.presentation.Artifact_ModelWizardID"
+            name="%_UI_Artifact_ModelWizard_label"
+            class="artifact.presentation.Artifact_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Artifact_ModelFile.gif">
+         <description>%_UI_Artifact_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated artifact -->
+      <editor
+            id="artifact.presentation.Artifact_EditorID"
+            name="%_UI_Artifact_Editor_label"
+            icon="icons/full/obj16/Artifact_ModelFile.gif"
+            extensions="artifact_"
+            class="artifact.presentation.Artifact_Editor"
+            contributorClass="artifact.presentation.Artifact_ActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated assurancecase -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="assuranceCase.presentation.AssuranceCase_ModelWizardID"
+            name="%_UI_AssuranceCase_ModelWizard_label"
+            class="assuranceCase.presentation.AssuranceCase_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AssuranceCase_ModelFile.gif">
+         <description>%_UI_AssuranceCase_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated assurancecase -->
+      <editor
+            id="assuranceCase.presentation.AssuranceCase_EditorID"
+            name="%_UI_AssuranceCase_Editor_label"
+            icon="icons/full/obj16/AssuranceCase_ModelFile.gif"
+            extensions="assurancecase_"
+            class="assuranceCase.presentation.AssuranceCase_Editor"
+            contributorClass="assuranceCase.presentation.AssuranceCase_ActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated base -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="base.presentation.Base_ModelWizardID"
+            name="%_UI_Base_ModelWizard_label"
+            class="base.presentation.Base_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Base_ModelFile.gif">
+         <description>%_UI_Base_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated base -->
+      <editor
+            id="base.presentation.Base_EditorID"
+            name="%_UI_Base_Editor_label"
+            icon="icons/full/obj16/Base_ModelFile.gif"
+            extensions="base_"
+            class="base.presentation.Base_Editor"
+            contributorClass="base.presentation.Base_ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

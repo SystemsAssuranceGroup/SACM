@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="http://omg.sacm/2.0/base" nsPrefix="base_">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="base" nsURI="http://omg.sacm/2.3/base" nsPrefix="base_">
   <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="LangString" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lang" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

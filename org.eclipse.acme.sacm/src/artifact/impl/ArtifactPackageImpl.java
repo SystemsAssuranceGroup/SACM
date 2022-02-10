@@ -3,6 +3,7 @@
 package artifact.impl;
 
 import artifact.ArtifactPackage;
+import artifact.ArtifactPackageInterface;
 import artifact.Artifact_Package;
 
 import base.ArtifactElement;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -30,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link artifact.impl.ArtifactPackageImpl#getArtifactElement <em>Artifact Element</em>}</li>
+ *   <li>{@link artifact.impl.ArtifactPackageImpl#getInterface <em>Interface</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,6 +47,16 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 	 * @ordered
 	 */
 	protected EList<ArtifactElement> artifactElement;
+
+	/**
+	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ArtifactPackageInterface> interface_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,6 +94,18 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ArtifactPackageInterface> getInterface() {
+		if (interface_ == null) {
+			interface_ = new EObjectResolvingEList<ArtifactPackageInterface>(ArtifactPackageInterface.class, this, Artifact_Package.ARTIFACT_PACKAGE__INTERFACE);
+		}
+		return interface_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -100,6 +125,8 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 		switch (featureID) {
 			case Artifact_Package.ARTIFACT_PACKAGE__ARTIFACT_ELEMENT:
 				return getArtifactElement();
+			case Artifact_Package.ARTIFACT_PACKAGE__INTERFACE:
+				return getInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,6 +144,10 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 				getArtifactElement().clear();
 				getArtifactElement().addAll((Collection<? extends ArtifactElement>)newValue);
 				return;
+			case Artifact_Package.ARTIFACT_PACKAGE__INTERFACE:
+				getInterface().clear();
+				getInterface().addAll((Collection<? extends ArtifactPackageInterface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -132,6 +163,9 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 			case Artifact_Package.ARTIFACT_PACKAGE__ARTIFACT_ELEMENT:
 				getArtifactElement().clear();
 				return;
+			case Artifact_Package.ARTIFACT_PACKAGE__INTERFACE:
+				getInterface().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -146,6 +180,8 @@ public class ArtifactPackageImpl extends ArtifactElementImpl implements Artifact
 		switch (featureID) {
 			case Artifact_Package.ARTIFACT_PACKAGE__ARTIFACT_ELEMENT:
 				return artifactElement != null && !artifactElement.isEmpty();
+			case Artifact_Package.ARTIFACT_PACKAGE__INTERFACE:
+				return interface_ != null && !interface_.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

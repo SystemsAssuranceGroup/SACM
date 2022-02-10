@@ -17,7 +17,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated base -->
       <package
-            uri="http://omg.sacm/2.0/base"
+            uri="http://omg.sacm/2.3/base"
             class="base.Base_Package"
             genModel="model/base.genmodel"/>
    </extension>
@@ -25,7 +25,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated argumentation -->
       <package
-            uri="http://omg.sacm/2.0/argumentation"
+            uri="http://omg.sacm/2.3/argumentation"
             class="argumentation.Argumentation_Package"
             genModel="model/argumentation.genmodel"/>
    </extension>
@@ -33,7 +33,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated artifact -->
       <package
-            uri="http://omg.sacm/2.0/artifact"
+            uri="http://omg.sacm/2.3/artifact"
             class="artifact.Artifact_Package"
             genModel="model/artifact.genmodel"/>
    </extension>
@@ -41,7 +41,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated terminology -->
       <package
-            uri="http://omg.sacm/2.0/terminology"
+            uri="http://omg.sacm/2.3/terminology"
             class="terminology.Terminology_Package"
             genModel="model/terminology.genmodel"/>
    </extension>
@@ -49,7 +49,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated assurancecase -->
       <package
-            uri="http://omg.sacm/2.0/assurancecase"
+            uri="http://omg.sacm/2.3/assurancecase"
             class="assuranceCase.AssuranceCase_Package"
             genModel="model/assurancecase.genmodel"/>
    </extension>

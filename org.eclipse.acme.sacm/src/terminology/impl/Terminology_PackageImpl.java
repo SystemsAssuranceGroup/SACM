@@ -2,7 +2,15 @@
  */
 package terminology.impl;
 
+import argumentation.Argumentation_Package;
+import argumentation.impl.Argumentation_PackageImpl;
+import artifact.Artifact_Package;
+import artifact.impl.Artifact_PackageImpl;
+import assuranceCase.AssuranceCase_Package;
+import assuranceCase.impl.AssuranceCase_PackageImpl;
 import base.Base_Package;
+
+import base.impl.Base_PackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -129,7 +137,7 @@ public class Terminology_PackageImpl extends EPackageImpl implements Terminology
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link Terminology_Package#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -143,23 +151,38 @@ public class Terminology_PackageImpl extends EPackageImpl implements Terminology
 		if (isInited) return (Terminology_Package)EPackage.Registry.INSTANCE.getEPackage(Terminology_Package.eNS_URI);
 
 		// Obtain or create and register package
-		Terminology_PackageImpl theTerminology_Package = (Terminology_PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Terminology_PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Terminology_PackageImpl());
+		Object registeredTerminology_Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Terminology_PackageImpl theTerminology_Package = registeredTerminology_Package instanceof Terminology_PackageImpl ? (Terminology_PackageImpl)registeredTerminology_Package : new Terminology_PackageImpl();
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		Base_Package.eINSTANCE.eClass();
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AssuranceCase_Package.eNS_URI);
+		AssuranceCase_PackageImpl theAssuranceCase_Package = (AssuranceCase_PackageImpl)(registeredPackage instanceof AssuranceCase_PackageImpl ? registeredPackage : AssuranceCase_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Base_Package.eNS_URI);
+		Base_PackageImpl theBase_Package = (Base_PackageImpl)(registeredPackage instanceof Base_PackageImpl ? registeredPackage : Base_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Artifact_Package.eNS_URI);
+		Artifact_PackageImpl theArtifact_Package = (Artifact_PackageImpl)(registeredPackage instanceof Artifact_PackageImpl ? registeredPackage : Artifact_Package.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(Argumentation_Package.eNS_URI);
+		Argumentation_PackageImpl theArgumentation_Package = (Argumentation_PackageImpl)(registeredPackage instanceof Argumentation_PackageImpl ? registeredPackage : Argumentation_Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theTerminology_Package.createPackageContents();
+		theAssuranceCase_Package.createPackageContents();
+		theBase_Package.createPackageContents();
+		theArtifact_Package.createPackageContents();
+		theArgumentation_Package.createPackageContents();
 
 		// Initialize created meta-data
 		theTerminology_Package.initializePackageContents();
+		theAssuranceCase_Package.initializePackageContents();
+		theBase_Package.initializePackageContents();
+		theArtifact_Package.initializePackageContents();
+		theArgumentation_Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theTerminology_Package.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Terminology_Package.eNS_URI, theTerminology_Package);
 		return theTerminology_Package;
@@ -446,7 +469,7 @@ public class Terminology_PackageImpl extends EPackageImpl implements Terminology
 		expressionEClass.getESuperTypes().add(this.getExpressionElement());
 		termEClass.getESuperTypes().add(this.getExpressionElement());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(terminologyElementEClass, TerminologyElement.class, "TerminologyElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(terminologyGroupEClass, TerminologyGroup.class, "TerminologyGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

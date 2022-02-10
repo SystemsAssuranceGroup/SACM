@@ -1,6 +1,6 @@
-@namespace(uri="http://omg.sacm/2.0/terminology", prefix="terminology_")
+@namespace(uri="http://omg.sacm/2.3/terminology", prefix="terminology_")
 package terminology;
-import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
+import "http://omg.sacm/2.3/base";
 
   abstract class TerminologyElement extends base.ArtifactElement {
   }
@@ -11,6 +11,7 @@ import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
 
   class TerminologyPackage extends TerminologyElement {
     val TerminologyElement[*] terminologyElement;
+    ref TerminologyPackageInterface[*] ~interface;
   }
 
   class TerminologyPackageBinding extends TerminologyPackage {
@@ -25,7 +26,7 @@ import "platform:/resource/org.eclipse.acme.sacm/model/base.ecore";
   }
 
   class Category extends TerminologyAsset {
-  	ref Category category;
+  	ref Category[*] category;
   }
 
   abstract class ExpressionElement extends TerminologyAsset {
