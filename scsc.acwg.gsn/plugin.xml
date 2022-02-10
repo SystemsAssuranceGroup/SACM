@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated gsn -->
+      <package
+            uri="http://scsc.acwg.gsn/2.0"
+            class="gsn.Gsn_Package"
+            genModel="model/gsn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated gsn -->
+      <package
+            uri="http://omg.sacm/2.3/argumentation"
+            class="argumentation.Argumentation_Package"
+            genModel="model/gsn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated gsn -->
+      <package
+            uri="http://omg.sacm/2.3/base"
+            class="base.Base_Package"
+            genModel="model/gsn.genmodel"/>
+   </extension>
+
+</plugin>

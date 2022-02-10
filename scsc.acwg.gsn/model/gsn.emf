@@ -10,61 +10,74 @@ import "http://omg.sacm/2.3/argumentation";
   class ContractModule extends argumentation.ArgumentPackageBinding {
   }
 
-  class ChoiceNode extends argumentation.ArgumentAsset {
-  	attr String choice;
+  class Choice extends argumentation.ArgumentAsset {
   }
 
   class Context extends argumentation.ArgumentAsset {
     attr boolean[1] isPublic = false;
-    attr boolean[1] refersToExternalMaterial = false;
+    attr boolean[1] uninstantiated = false;
   }
 
   class Strategy extends argumentation.ArgumentReasoning {
     attr boolean[1] undeveloped = false;
+    attr boolean[1] uninstantiated = false;
   }
 
   class Goal extends argumentation.Claim {
     attr boolean[1] isPublic = false;
     attr boolean[1] undeveloped = false;
     attr boolean[1] toBeSupportedByContract = false;
+    attr boolean[1] uninstantiated = false;
   }
 
   class Justification extends argumentation.Claim {
+  	attr boolean[1] isPublic = false;
+  	attr boolean[1] uninstantiated = false;
   }
 
   class Assumption extends argumentation.Claim {
+  	attr boolean[1] isPublic = false;
+  	attr boolean[1] uninstantiated = false;
   }
 
   class AwayGoal extends argumentation.Claim {
+  	attr String module;
+  }
+  
+  class AwayAssumption extends argumentation.Claim {
+  	attr String module;
+  }
+  
+   class AwayJustification extends argumentation.Claim {
+  	attr String module;
   }
 
   class AwaySolution extends argumentation.ArtifactReference {
+  	attr String module;
   }
 
   class AwayContext extends argumentation.ArgumentAsset {
+  	attr String module;
   }
   
   class ModuleReference extends argumentation.ArtifactReference {
-  	ref Module module;
   }
   
   class ContractModuleReference extends argumentation.ArtifactReference {
-	ref ContractModule module;
   }
 
   class Solution extends argumentation.ArtifactReference {
     attr boolean[1] isPublic = false;
+    attr boolean[1] uninstantiated = false;
   }
 
   class SupportedBy extends argumentation.AssertedInference {
   	attr boolean[1] isMany = false;
   	attr boolean[1] isOptional = false;
-    attr boolean[1] isChoice = false;
   }
 
   class InContextOf extends argumentation.AssertedContext {
   	attr boolean[1] isMany = false;
   	attr boolean[1] isOptional = false;
-    attr boolean[1] isChoice = false;
   }
 

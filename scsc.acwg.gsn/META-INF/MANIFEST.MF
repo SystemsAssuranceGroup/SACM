@@ -1,6 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: scsc.acwg.gsn
-Bundle-SymbolicName: scsc.acwg.gsn; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: scsc.acwg.gsn;singleton:=true
+Automatic-Module-Name: scsc.acwg.gsn
 Bundle-Version: 0.1.0.qualifier
-Require-Bundle: org.eclipse.emf.ecore
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: gsn,
+ gsn.impl,
+ gsn.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.acme.sacm;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
