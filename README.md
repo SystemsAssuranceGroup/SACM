@@ -26,7 +26,7 @@ At last, all pull requests are more than welcome.
 [Scott Ankrum](ankrums@mitre.org) from MITRE  
 [Zhe jiang](zhe.jiang@cam.ac.uk) from Cambridge University  
 [Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de) from Fraunhofer IESE  
-
+More to be added soon...
 
 [1]. https://www.omg.org/spec/SACM/2.2/About-SACM/  
 [2]. https://www.eclipse.org/epsilon/  
