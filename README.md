@@ -14,7 +14,10 @@ Folder /diagram/profile contains the files for the SACM UML profile.
 
 # Projects:
 The project org.eclipse.acme.sacm.* contains the EMF (Eclipse Modelling Framework) of SACM 2.3 - please note that the metamodel is actively maintained, subscription to this repo is recommeneded.  
-In the case that the metamodel is updated, the old version of EMF SACM models needs to be migrated, we recommend using the Eclipse Wizard Language (EWL) [2] for this purpose.   The project profile.sacm.omg contains the SACM 2.3 UML profile created using Papyrus [3] that conforms to UML 2.5.0.   
+In the case that the metamodel is updated, the old version of EMF SACM models needs to be migrated, we recommend using the Eclipse Wizard Language (EWL) [2] for this purpose.   The project profile.sacm.omg contains the SACM 2.3 UML profile created using Papyrus [3] that conforms to UML 2.5.0.  
+
+The project scs.acwg.gsn contains the EMF implementation of the GSN (Goal Structuring Notation) metamodel.  
+GSN is a safety case standard maintained by the Assurance Case Working Group (ACWG), please refer to [4] for more details.  
 
 At last, all pull requests are more than welcome.
 
@@ -30,4 +33,5 @@ More to be added soon...
 
 [1]. https://www.omg.org/spec/SACM/2.2/About-SACM/  
 [2]. https://www.eclipse.org/epsilon/  
-[3]. https://www.eclipse.org/papyrus/
+[3]. https://www.eclipse.org/papyrus/  
+[4]. https://scsc.uk/gsn
