@@ -26,5 +26,5 @@ The project |profile.sacm.omg| contains the UML profile created using Papyrus [2
 [Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de) from Fraunhofer IESE  
 
 
-[1]. https://www.omg.org/spec/SACM/2.2/About-SACM/
+[1]. https://www.omg.org/spec/SACM/2.2/About-SACM/  
 [2]. https://www.eclipse.org/papyrus/
