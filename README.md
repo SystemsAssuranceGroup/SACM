@@ -5,22 +5,21 @@ More information can be found at [1].
 
 The current version of SACM is 2.2, this repository contians materials for SACM 2.3, where the RFT of SACM stores latests updates to the standard.
 
-Folders:
+# Folders:
 
 Folder /diagram contains the files for the diagrams. 
 Folder /diagram/dsl contains the files for the technology-independent metamodel.\
 Folder /diagram/profile contains the files for the SACM UML profile.
 /diagram/emof.xml is the EMOF file for SACM 2.3.
 
-Please feel free to contact the members RFT of SACM for any questions:
+## Please feel free to contact the members RFT of SACM for any questions:
 
-Robert Martin: ramartin "at" mitre.org;
-Ran Wei: ranwei "at" dlut.edu.cn;
-Richard Hawkins: richard.hawkins "at" york.ac.uk;
-Scott Ankrum: ankrums "at" mitre.org;
-Zhe jiang: zhe.jiang "at" cam.ac.uk
-Ioannis Sorokos: ioannis.sorokos "at" iese.fraunhofer.de
+[Robert Martin](ramartin@mitre.org)
+[Ran Wei](ranwei@dlut.edu.cn)
+[Richard Hawkins](richard.hawkins@york.ac.uk)
+[Scott Ankrum](ankrums@mitre.org)
+[Zhe jiang](zhe.jiang@cam.ac.uk)
+[Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de)
 
 
 [1]. https://www.omg.org/spec/SACM/2.2/About-SACM/
-
