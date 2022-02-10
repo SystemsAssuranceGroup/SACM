@@ -16,7 +16,7 @@ Folder /diagram/profile contains the files for the SACM UML profile.
 The project |org.eclipse.acme.sacm| contains the EMF (Eclipse Modelling Framework) of SACM 2.1 - please note that this project has not been updated to SACM 2.3, usage of this project is at the user's own discretion.
 The project |profile.sacm.omg| contains the UML profile created using Papyrus [2] that conforms to SACM 2.3. 
 
-## Please feel free to contact the members RFT of SACM for any questions:
+## Please feel free to contact the RFT members of SACM for any questions:
 
 [Robert Martin](ramartin@mitre.org) from MITRE  
 [Ran Wei](ranwei@dlut.edu.cn) from Dalian University of Technology  
