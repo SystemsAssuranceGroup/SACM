@@ -14,12 +14,12 @@ Folder /diagram/profile contains the files for the SACM UML profile.
 
 ## Please feel free to contact the members RFT of SACM for any questions:
 
-[Robert Martin](ramartin@mitre.org)
-[Ran Wei](ranwei@dlut.edu.cn)
-[Richard Hawkins](richard.hawkins@york.ac.uk)
-[Scott Ankrum](ankrums@mitre.org)
-[Zhe jiang](zhe.jiang@cam.ac.uk)
-[Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de)
+[Robert Martin](ramartin@mitre.org)  
+[Ran Wei](ranwei@dlut.edu.cn)  
+[Richard Hawkins](richard.hawkins@york.ac.uk)  
+[Scott Ankrum](ankrums@mitre.org)  
+[Zhe jiang](zhe.jiang@cam.ac.uk)  
+[Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de)  
 
 
 [1]. https://www.omg.org/spec/SACM/2.2/About-SACM/
