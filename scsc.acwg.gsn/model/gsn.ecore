@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gsn" nsURI="http://scsc.acwg.gsn/2.0" nsPrefix="gsn_">
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContractModule" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentPackageBinding"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoiceNode" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentAsset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="choice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Context" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentAsset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPublic" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refersToExternalMaterial"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Strategy" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentReasoning">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="undeveloped" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="http://omg.sacm/2.3/argumentation#//Claim">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPublic" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="undeveloped" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toBeSupportedByContract"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Justification" eSuperTypes="http://omg.sacm/2.3/argumentation#//Claim"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assumption" eSuperTypes="http://omg.sacm/2.3/argumentation#//Claim"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AwayGoal" eSuperTypes="http://omg.sacm/2.3/argumentation#//Claim"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AwaySolution" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArtifactReference"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AwayContext" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArgumentAsset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleReference" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArtifactReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContractModuleReference" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArtifactReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//ContractModule"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Solution" eSuperTypes="http://omg.sacm/2.3/argumentation#//ArtifactReference">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPublic" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupportedBy" eSuperTypes="http://omg.sacm/2.3/argumentation#//AssertedInference">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMany" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOptional" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isChoice" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InContextOf" eSuperTypes="http://omg.sacm/2.3/argumentation#//AssertedContext">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMany" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOptional" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isChoice" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+  </eClassifiers>
+</ecore:EPackage>
