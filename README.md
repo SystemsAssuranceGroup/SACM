@@ -1,16 +1,16 @@
 # SACM
-This repository contains materials related to the Structured Assurance Case Metamodel (SACM)
-SACM is a standard released by the Object Management Group (OMG) for constructing model based system assurance cases.
-More information can be found at [1].
+This repository contains materials related to the Structured Assurance Case Metamodel (SACM).  
+SACM is a standard released by the Object Management Group (OMG) for constructing model based system assurance cases.  
+More information can be found at [1].  
 
-The current version of SACM is 2.2, this repository contians materials for SACM 2.3 (to be released in year 2022), where the RFT of SACM stores latests updates to the standard.
+The current version of SACM is 2.2, this repository contians materials for SACM 2.3 (to be released in year 2022), where the RTF of SACM stores latests updates to the standard.
 
 # Folders:
 
-Folder /diagram contains the files for the diagrams. 
-Folder /diagram/dsl contains the files for the technology-independent metamodel.\
-Folder /diagram/profile contains the files for the SACM UML profile.
-/diagram/emof.xml is the EMOF file for SACM 2.3.
+Folder /diagram contains the files for the diagrams.  
+Folder /diagram/dsl contains the files for the technology-independent metamodel.  
+Folder /diagram/profile contains the files for the SACM UML profile.  
+/diagram/emof.xml is the EMOF file for SACM 2.3.  
 
 # Projects:
 The project org.eclipse.acme.sacm.* contains the EMF (Eclipse Modelling Framework) of SACM 2.3 - please note that the metamodel is actively maintained, subscription to this repo is recommeneded.  
