@@ -60,7 +60,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gsn.ecore#//InContextOf/isOptional"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Argumentation_" ecorePackage="http://omg.sacm/2.3/argumentation#/">
+  <genPackages prefix="Argumentation_" generateExampleClass="false" ecorePackage="http://omg.sacm/2.3/argumentation#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://omg.sacm/2.3/argumentation#//AssertionDeclaration">
       <genEnumLiterals ecoreEnumLiteral="http://omg.sacm/2.3/argumentation#//AssertionDeclaration/asserted"/>
       <genEnumLiterals ecoreEnumLiteral="http://omg.sacm/2.3/argumentation#//AssertionDeclaration/needsSupport"/>
@@ -107,7 +107,7 @@
     <genClasses ecoreClass="http://omg.sacm/2.3/argumentation#//AssertedContext"/>
     <genClasses ecoreClass="http://omg.sacm/2.3/argumentation#//AssertedArtifactContext"/>
   </genPackages>
-  <genPackages prefix="Base_" ecorePackage="http://omg.sacm/2.3/base#/">
+  <genPackages prefix="Base_" generateExampleClass="false" ecorePackage="http://omg.sacm/2.3/base#/">
     <genClasses image="false" ecoreClass="http://omg.sacm/2.3/base#//Element"/>
     <genClasses ecoreClass="http://omg.sacm/2.3/base#//LangString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://omg.sacm/2.3/base#//LangString/lang"/>

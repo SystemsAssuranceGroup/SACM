@@ -244,9 +244,5 @@
 <superClass xmi:idref="_18_5_1_46401b8_1501599387856_997512_8050"/>
 <ownedAttribute xmi:id="_18_5_1_46401b8_1501599563782_463869_8210" name="participantPackage" type="_18_5_1_46401b8_1501599387856_997512_8050" lower="2" upper="*"/>
 </ownedType>
+</emof:Package>
 </xmi:XMI>
-
-
-
-
-
