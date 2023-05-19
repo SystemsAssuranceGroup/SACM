@@ -27,7 +27,7 @@ At last, all pull requests are more than welcome.
 [Ran Wei](rw741@cam.ac.uk) from University of Cambridge  
 [Richard Hawkins](richard.hawkins@york.ac.uk) from University of York  
 [Scott Ankrum](ankrums@mitre.org) from MITRE  
-[Zhe jiang](zhe.jiang@cam.ac.uk) from Cambridge University  
+[Zhe jiang](zj226@cam.ac.uk) from University of Cambridge  
 [Ioannis Sorokos](ioannis.sorokos@iese.fraunhofer.de) from Fraunhofer IESE  
 More to be added soon...
 
