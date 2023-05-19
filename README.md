@@ -24,7 +24,7 @@ At last, all pull requests are more than welcome.
 ## Please feel free to contact the RFT members of SACM for any questions:
 
 [Robert Martin](ramartin@mitre.org) from MITRE  
-[Ran Wei](ranwei@dlut.edu.cn) from Dalian University of Technology  
+[Ran Wei](rw741@cam.ac.uk) from University of Cambridge  
 [Richard Hawkins](richard.hawkins@york.ac.uk) from University of York  
 [Scott Ankrum](ankrums@mitre.org) from MITRE  
 [Zhe jiang](zhe.jiang@cam.ac.uk) from Cambridge University  
